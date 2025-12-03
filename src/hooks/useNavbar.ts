@@ -7,6 +7,7 @@
  * @CopyRight             : © 2025 Adonai LN - B0MB0                         *
  ****************************************************************************/
 
+"use client";
 import * as React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useUserStore } from "@/store/user.store";

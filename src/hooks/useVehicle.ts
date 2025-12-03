@@ -7,6 +7,7 @@
  * @CopyRight             : © 2025 Adonai LN - B0MB0                         *
  ****************************************************************************/
 
+"use client";
 import * as React from "react";
 import { Vehicle } from "@/types/Vehicles";
 import { vehicleService } from "@/services/vehicle.service";
