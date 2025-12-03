@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+/* Load all fonts OpenSans for the app */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
-@theme inline {
+/* Load all fonts IstokWeb for the app */
+@font-face {
+  font-family: 'IstokWeb';
+  src: url('/fonts/IstokWeb-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IstokWeb';
+  src: url('/fonts/IstokWeb-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}   
+/* --foreground: #171717; */
+/* --background: #EAFBDE; */
+
+/* Define global variables */
+:root {
+  /* Color palette */
+  --background: rgba(234, 234, 234, 0.87); /* Fondo de inputs o contenedor general */
+  --primary: rgb(153, 29, 78); /* Botón principal o acento (ej. “Iniciar Sesión”) */
+  --light: rgba(255, 255, 255); /* Color blanco (light) */
+  --text-primary: rgb(33, 33, 33, 0.91); /* Texto Principal */
+  --text-secondary: rgba(112, 112, 112, 0.8); /* Texto secundario o placeholder */
+  --error: rgb(203, 32, 39); /* Rojo institucional */
+  --border-hover: rgba(122, 122, 122, 0.6); /* Bordes de inputs o hover en botones */
+  --divider: rgb(187, 187, 187); /* Iconos, separadores, fondo de inputs */
+  --transparent: rgba(255, 255, 255, 0); /* Fondo transparente */
+
+  /* Fonts */
+  --font-title: 'IstokWeb';
+  --font-text: 'OpenSans', sans-serif;
+}
+
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-text);
+  /* color: var(--foreground); */
+}
+
+.text-title {
+  font-family: var(--font-title);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.text-subtitle {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.text-body {
+  font-family: var(--font-text);
+  font-weight: 400;
+}
+
+.text-note {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
 }
